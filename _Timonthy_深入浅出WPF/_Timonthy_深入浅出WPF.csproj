@@ -90,6 +90,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="笔记\刘铁猛深入浅出的WPF笔记.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
