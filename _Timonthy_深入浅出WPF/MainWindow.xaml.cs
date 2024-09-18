@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _Timonthy_深入浅出WPF
 {
@@ -35,6 +22,16 @@ namespace _Timonthy_深入浅出WPF
                 MessageBox.Show(h.Name, "展示内容");
                 MessageBox.Show(h.Child.Name, "孩子的名字");
             }
+        }
+
+        /// <summary>
+        /// 这个事件实际上就是自己的事件被自己的对象订阅，事件处理器就是这个方法。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello WPF!");
         }
     }
 

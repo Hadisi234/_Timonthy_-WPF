@@ -79,5 +79,7 @@
             <Slider x:Name="sld" Grid.Row="2" Value="50" Maximum="100" Minimum="0"/>
         </Grid>
         <!--#endregion-->
+
+        <Button x:Name="button1" Content="Click Me!" Width="200" Height="100" Click="button1_Click"></Button>
     </StackPanel>
 </Window>
