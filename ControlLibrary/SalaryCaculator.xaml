@@ -8,9 +8,9 @@
         <Label Canvas.Left="12" Canvas.Top="12" Content="基本工资：" Height="28" Name ="label1"/>
         <Label Canvas.Left="12" Canvas.Top="52" Content="岗位工资：" Height="28" Name ="label2"/>
         <Label Canvas.Left="12" Canvas.Top="85" Content="实际工资：" Height="28" Name ="label3" />
-        <TextBox Canvas.Left="82" Text="TextBox" Canvas.Top="17" Width="120" Name="textBox1"/>
-        <TextBox Canvas.Left="82" Text="TextBox" Canvas.Top="52" Width="120" Name="textBox2"/>
-        <TextBox Canvas.Left="82" Text="TextBox" Canvas.Top="90" Width="120" Name="textBox3"/>
+        <TextBox Canvas.Left="82" Text="" Canvas.Top="17" Width="120" Name="textBox1"/>
+        <TextBox Canvas.Left="82" Text="" Canvas.Top="52" Width="120" Name="textBox2"/>
+        <TextBox Canvas.Left="82" Text="" Canvas.Top="90" Width="120" Name="textBox3"/>
         <Button Content="计算" Click="button1_Click" Canvas.Left="70" Canvas.Top="126" Width="75" Name="button1"/>
     </Canvas>
 </UserControl>

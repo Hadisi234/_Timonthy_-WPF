@@ -90,10 +90,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="笔记\刘铁猛深入浅出的WPF笔记.md" />
+    <Content Include="笔记\刘铁猛深入浅出的WPF笔记.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlLibrary\ControlLibrary.csproj">
+      <Project>{f8a13a5c-95a9-4a3c-bba3-7108aa54043b}</Project>
+      <Name>ControlLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
