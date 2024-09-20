@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using ControlLibrary;
+using System.ComponentModel;
 using System.Globalization;
 using System.Windows;
 
@@ -33,6 +34,19 @@ namespace _Timonthy_深入浅出WPF
         {
             MessageBox.Show("Hello WPF!");
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            #region 这个引用的是ControlLibrary下的WinHappy
+            ControlLibrary.WindowHappy windowHappy = new ControlLibrary.WindowHappy();//x:FieldModifier="public" 少了这一行代码，下面就会出现问题大概率默认的字段属性开闭是internal
+            windowHappy.textBox1.Text = "I'm Happy!";//这种直接将字段暴露给外部代码进行修改挺不符合规范的，虽然很方便。可以设置x:FieldModifier="private"预防这种情况
+            windowHappy.Show();
+            #endregion
+
+            WindowHappy windowHappy1 = new WindowHappy();
+            windowHappy1.textBox1.Text = "今天我很高兴！";
+            windowHappy1.Show();
+        }
     }
 
     #region 实现类型转换器
@@ -53,7 +67,7 @@ namespace _Timonthy_深入浅出WPF
         /// <returns></returns>
         public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
-            string name = value.ToString();
+            string name = value.ToString();//这样是肯定能拿到字符串的值
             Human child = new Human();
             child.Name = name;
             return child;//孩子的孩子应该为空，还没有着落。

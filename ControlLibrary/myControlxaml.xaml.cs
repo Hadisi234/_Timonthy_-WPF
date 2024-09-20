@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,13 +27,17 @@ namespace ControlLibrary
             InitializeComponent();
 
             #region 没有x:Name去获取对象,间接访问
-            Grid g = this.Content as Grid;
-            Button b = g.Children[0] as Button;
+            StackPanel s = this.Content as StackPanel;
+            Button b = s.Children[0] as Button;
             b.Content = "Click me";
             #endregion
 
             #region 有x:Name,直接引用
             button1.Content = "快点击我";
+            #endregion
+
+            #region 没有Name属性，使用x:Name去实现引用
+            stu1.ID = 12345;
             #endregion
         }
 
@@ -39,7 +45,28 @@ namespace ControlLibrary
         {
             MessageBox.Show("Hello WPF!");
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(stu1.ID.ToString());
+        }
     }
 
-    public
+    [TypeConverter(typeof(StringToIntTypeConverter))]
+    public class Student
+    {
+        public int ID { get; set; }
+    }
+    //public record Teacher(string Name);
+
+    #region 复习一下实现类型转换器
+    internal class StringToIntTypeConverter : TypeConverter
+    {
+        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
+        {
+            int id = Convert.ToInt32(value);
+            return id;
+        }
+    }
+    #endregion
 }

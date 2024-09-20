@@ -112,8 +112,13 @@
             <!--x:FieldModifier=""-->
             <!--x:Name的演示写在了myControlxaml里面，如果没有名字该怎么获取对象-->
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition MaxHeight="24"/>
+                </Grid.RowDefinitions>
                 <controls:myControlxaml></controls:myControlxaml>
                 <!---myControlxaml不可访问-->
+                <Button Grid.Row="1" Content="Show Happy" Width="80" Height="24" Click="Button_Click_1"></Button>
             </Grid>
         </TabItem>
         <TabItem Header="Lesson5">

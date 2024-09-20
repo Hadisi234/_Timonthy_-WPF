@@ -6,8 +6,16 @@
              xmlns:local="clr-namespace:ControlLibrary"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="LightBlue">
+    <StackPanel Background="LightBlue">
+
         <Button x:Name="button1" Content="Hello" Width="80" Height="80" Click="Button_Click"></Button>
-        
-    </Grid>
+
+        <!--#region 证明x:Name可以实现没有名字属性的对象唯一引用 -->
+        <Button x:Name="button2" Width="80" Height="80" Click="button2_Click">
+            <Button.Content>
+                <local:Student x:Name="stu1" ID="1"/>
+            </Button.Content>
+        </Button>
+        <!--#endregion-->
+    </StackPanel>
 </UserControl>
