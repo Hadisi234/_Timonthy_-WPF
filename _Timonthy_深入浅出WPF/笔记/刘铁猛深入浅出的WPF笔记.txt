@@ -80,8 +80,16 @@ Lesson 04
 Lesson 05 MVVM入门与提高
 1、基本常识
 	>>1.开发/学习环境的准备
+		1.Visual Studio 2010 现在也可以采用Visual Studio 2022
+		2.Microsoft Prism 
+		3.Microsoft Blend SDK
 	>>2.必要知识的准备
+		1.熟悉Data Binding和Denpendency Property
+		2.了解WPF中的命令（知道ICommand接口即可）
+		3.熟悉Lamda表达式
 	>>3.创建Code Snippet
+		1.Code Snippet的使用
+		2.Code Snippet的创建
 2、MVVM设计模式详解
 	>>1.为什么要使用MVVM模式
 	>>2.什么是Model
