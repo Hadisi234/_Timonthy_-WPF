@@ -86,14 +86,40 @@ Lesson 05 MVVM入门与提高
 	>>2.必要知识的准备
 		1.熟悉Data Binding和Denpendency Property
 		2.了解WPF中的命令（知道ICommand接口即可）
+			主要使用委托命令（DelegateCommand）
 		3.熟悉Lamda表达式
 	>>3.创建Code Snippet
 		1.Code Snippet的使用
+			>>1.这个就是使用代码片段
+			>>2.propdp可以直接创建依赖属性
 		2.Code Snippet的创建
+			>>1.创建代码片段，Tool => 代码模版管理器 => 找到Csharp => Visual C# => 修改之后 复制到代码片段路径里，修改之后添加进去就可以了。
 2、MVVM设计模式详解
+	MVVM = Model - View - ViewModel
+	警惕过度设计，如果功能特别简单，就不要使用框架。
 	>>1.为什么要使用MVVM模式
+		1、团队层面：统一思维方式和实现方法
+		2、架构层面：稳定，解耦，富有禅意
+			● 将界面和业务逻辑解耦，程序之间很多模块耦合很多，就会很复杂。
+			● 橘子皮原理：我们很容易就将橘子皮和橘子分离开。然后给橘子皮换上柚子皮，橙子皮等。
+			● 困难点：界面一改，原先没有问题的后台代码也得跟着修改。
+				我们的代码应该对扩展开放，对修改关闭
+		3、代码层面：可读，可测，可替换
 	>>2.什么是Model
+		● 现实世界中对象的抽象结果
+		● 建模：将现实世界的东西抽象成类。
 	>>3.什么是View/ViewModel
+		● View = UI
+		● ViewModel = Model for View
+			● 传递数据--数据属性
+			● 传递操作--命令属性
 3、案例分析
 	>>1.初阶案例
+		● Notification与数据属性
+		● DelegateCommand与命令属性
+		● View与ViewModel的交互（技术难点）
+			● 我们希望可以很容易给View换一个UI，不改变业务逻辑
+			● 不借助其它的框架去实现MVVM，需要借助Notification和DelegateCommand手搓
 	>>2.进阶案例
+		● 使用Microsoft Prism
+		● 餐馆点菜系统Demo

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA2589B3-2060-44AF-95F4-90F3738045C8}</ProjectGuid>
+    <ProjectGuid>{182C2D5A-6246-494B-BD4E-8736E6C183E9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_Timonthy_深入浅出WPF</RootNamespace>
-    <AssemblyName>_Timonthy_深入浅出WPF</AssemblyName>
+    <RootNamespace>Lesson_05_MVVM</RootNamespace>
+    <AssemblyName>Lesson_05_MVVM</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,16 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Lesson_05_不使用MVVM_Demo.xaml.cs">
-      <DependentUpon>Lesson_05_不使用MVVM_Demo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowHappy.xaml.cs">
-      <DependentUpon>WindowHappy.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Lesson_05_不使用MVVM_Demo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="ViewModels\NotificationObject.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,10 +69,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WindowHappy.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -104,17 +92,14 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="笔记\MVVM相关模块关系.png" />
-    <Content Include="笔记\刘铁猛深入浅出的WPF笔记.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ControlLibrary\ControlLibrary.csproj">
-      <Project>{f8a13a5c-95a9-4a3c-bba3-7108aa54043b}</Project>
-      <Name>ControlLibrary</Name>
-    </ProjectReference>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

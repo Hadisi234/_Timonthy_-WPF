@@ -47,6 +47,25 @@ namespace _Timonthy_深入浅出WPF
             windowHappy1.textBox1.Text = "今天我很高兴！";
             windowHappy1.Show();
         }
+
+        #region 验证Code snippet是否好用
+        //private string name;
+        //public string Name
+        //{
+        //    get { return name; }
+        //    set
+        //    {
+        //        name = value;
+        //        this.RaisePropertyChanged(Name);
+        //    }
+        //}
+        #endregion
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Lesson_05_不使用MVVM_Demo lesson_05 = new Lesson_05_不使用MVVM_Demo();
+            lesson_05.Show();
+        }
     }
 
     #region 实现类型转换器
