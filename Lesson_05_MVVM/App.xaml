@@ -2,7 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Lesson_05_MVVM"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views\MainWindow.xaml">
+            <!--这里使用了相对路径-->
     <Application.Resources>
          
     </Application.Resources>

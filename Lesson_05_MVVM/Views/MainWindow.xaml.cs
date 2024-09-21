@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Lesson_05_MVVM
+namespace Lesson_05_MVVM.Views
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
