@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CrazyElephant.Client.Models
 {
-    public class Dish
+    internal class Restaurant
     {
         public string Name { get; set; }
-        public string Category { get; set; }
-        public string Comment { get; set; }
-        public double Score { get; set; }
+        public string Addresss { get; set; }
     }
 }
