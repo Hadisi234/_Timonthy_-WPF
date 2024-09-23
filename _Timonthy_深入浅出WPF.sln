@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLibrary", "ControlLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_05_MVVM", "Lesson_05_MVVM\Lesson_05_MVVM.csproj", "{182C2D5A-6246-494B-BD4E-8736E6C183E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyElephant.Client", "CrazyElephant.Client\CrazyElephant.Client.csproj", "{2CC7E69C-8DF3-4D91-9789-DA3748A91C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{182C2D5A-6246-494B-BD4E-8736E6C183E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{182C2D5A-6246-494B-BD4E-8736E6C183E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{182C2D5A-6246-494B-BD4E-8736E6C183E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC7E69C-8DF3-4D91-9789-DA3748A91C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC7E69C-8DF3-4D91-9789-DA3748A91C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC7E69C-8DF3-4D91-9789-DA3748A91C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC7E69C-8DF3-4D91-9789-DA3748A91C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

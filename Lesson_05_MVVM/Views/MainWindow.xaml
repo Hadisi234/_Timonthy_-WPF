@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lesson_05_MVVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Content="Save" x:Name="saveButton"/>
+        <Button Content="Save" x:Name="saveButton" Command="{Binding SaveCommand}"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -19,11 +19,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="lb1" Grid.Row="0" Background="LightBlue" FontSize="24" Margin="4"/>
-            <TextBox x:Name="lb2" Grid.Row="1" Background="LightBlue" FontSize="24" Margin="4"/>
-            <TextBox x:Name="lb3" Grid.Row="2" Background="LightBlue" FontSize="24" Margin="4"/>
-            <Button x:Name="addButton" Grid.Row="3" Content="Add" Width="120" Height="80"></Button>
-           
+            <TextBox x:Name="lb1" Grid.Row="0" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Input1}"/>
+            <TextBox x:Name="lb2" Grid.Row="1" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Input2}"/>
+            <TextBox x:Name="lb3" Grid.Row="2" Background="LightBlue" FontSize="24" Margin="4" Text="{Binding Result}"/>
+            <Button x:Name="addButton" Grid.Row="3" Content="Add" Width="120" Height="80" Command="{Binding AddCommand}"></Button>
         </Grid>
     </Grid>
 </Window>

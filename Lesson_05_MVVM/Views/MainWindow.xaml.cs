@@ -1,18 +1,5 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lesson_05_MVVM.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lesson_05_MVVM.Views
 {
@@ -24,7 +11,11 @@ namespace Lesson_05_MVVM.Views
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowViewModel();
+            //this.DataContext = new MainWindowViewModel();//在这里设置程序运行的时候才会识别出来，不会报错。
+            //可以在Xaml中设置， xmlns:viewmodels="clr-namespace:Lesson_05_MVVM.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+            //设置在Xaml中更方便，可以方便代码推断，突然发现只是推断，没有实际效果
         }
-      
+
     }
 }
