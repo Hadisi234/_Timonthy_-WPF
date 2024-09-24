@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrazyElephant.Client"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
-    <Grid>
-        
-    </Grid>
+        xmlns:viewModel ="clr-namespace:CrazyElephant.Client.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewModel:MainWindwoViewModel}"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="{Binding Restaurant.Name, StringFormat=\{0\}-在线订餐}" Height="600" Width="1000">
+    <Border>
+        <Grid>
+
+        </Grid>
+    </Border>
+    
 </Window>

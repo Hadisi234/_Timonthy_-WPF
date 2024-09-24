@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dish>
+	<Name>芝士煎牛排</Name>
+	<Category>热菜</Category>
+	<Comment>真的很好吃</Comment>
+	<Score>4</Score>
+</Dish>
+<Dish>
+	<Name>烤羊腿</Name>
+	<Category>热菜</Category>
+	<Comment>真的很好吃</Comment>
+	<Score>4</Score>
+</Dish>
+<Dish>
+	<Name>珍珠玉米翡翠白玉汤</Name>
+	<Category>热菜</Category>
+	<Comment>朱元璋：真的很好吃</Comment>
+	<Score>4</Score>
+</Dish>
+<Dish>
+	<Name>红烧黄河大鲤鱼</Name>
+	<Category>热菜</Category>
+	<Comment>真的很好吃</Comment>
+	<Score>4</Score>
+</Dish>

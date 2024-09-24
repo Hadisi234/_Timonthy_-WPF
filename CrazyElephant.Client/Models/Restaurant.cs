@@ -10,5 +10,6 @@ namespace CrazyElephant.Client.Models
     {
         public string Name { get; set; }
         public string Addresss { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
