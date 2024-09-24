@@ -100,6 +100,7 @@ namespace CrazyElephant.Client.ViewModels
         private void SelectMenuItemCommandExcute()
         {
             this.Count = this.DishMenu.Count(i => i.IsSelected == true);
+            //this.DishMenu.Clear();
         }
     }
 }

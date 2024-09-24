@@ -8,6 +8,9 @@
         d:DataContext="{d:DesignInstance Type=viewModel:MainWindwoViewModel}"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="{Binding Restaurant.Name, StringFormat=\{0\}-在线订餐}" Height="600" Width="1000">
+    <Window.DataContext>
+        <viewModel:MainWindwoViewModel></viewModel:MainWindwoViewModel>
+    </Window.DataContext>
     <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="6" Background="Yellow">
         <Grid x:Name="Root" Margin="4">
             <Grid.RowDefinitions>
@@ -44,10 +47,8 @@
                     <DataGridTemplateColumn Header="选中" SortMemberPath="isSelected" Width="120">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}"
-                                          VerticalAlignment="Center" HorizontalAlignment="Center"
-                                          Command="{Binding Path=DataContext.SelectMenuItemCommand,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=viewModel:MainWindwoViewModel}}"
-                                          />
+                                <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                          Command="{Binding Path=DataContext.SelectMenuItemCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=DataGrid}}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

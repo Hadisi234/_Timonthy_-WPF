@@ -24,7 +24,7 @@ namespace CrazyElephant.Client.Views
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindwoViewModel();
+           // this.DataContext = new MainWindwoViewModel();
         }
     }
 }
